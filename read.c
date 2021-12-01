@@ -8,13 +8,12 @@
 char *readline(void)
 {
 	char *input = NULL;
+	ssize_t get;
 	size_t bufsize = 0;
 
-	if (getline(&input, &bufsize, stdin) != -1)
-		;
-	else
+	get = getline(&input, &bufsize, stdin);
+	if (get == -1)
 	{
-		perror("Read fails");
 		exit(EXIT_FAILURE);
 	}
 

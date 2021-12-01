@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * readline - read the input of the user
+ * Return: the input
+ */
+
 char *readline(void)
 {
 	char *input = NULL;
@@ -9,8 +14,9 @@ char *readline(void)
 		;
 	else
 	{
-		perror("Read failure");
+		perror("Read fails");
 		exit(EXIT_FAILURE);
 	}
+
 	return (input);
 }

@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * exec - execute the command
+ * @args: command to execute
+ * Return: 1 on Success
+ */
+
 int exec(char **args)
 {
 	pid_t pid;

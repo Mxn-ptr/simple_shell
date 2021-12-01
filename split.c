@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * split - split the command in tokens
+ * @line: command to split
+ * @limit: characters limiters
+ * Return: splited command
+ */
+
 char **split(char *line, char *limit)
 {
 	int bufsize = 64, idx = 0;
@@ -34,6 +41,5 @@ char **split(char *line, char *limit)
 		token = strtok(NULL, limit);
 	}
 	tokens[idx] = NULL;
-	return tokens;
+	return (tokens);
 }
-	

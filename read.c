@@ -14,6 +14,7 @@ char *readline(void)
 	get = getline(&input, &bufsize, stdin);
 	if (get == -1)
 	{
+		free(input);
 		exit(EXIT_FAILURE);
 	}
 

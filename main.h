@@ -13,5 +13,6 @@ void loop(void);
 char *readline(void);
 char **split(char *line, char *limit);
 int exec(char **args);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 #endif

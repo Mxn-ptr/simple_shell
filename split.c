@@ -9,7 +9,7 @@
 
 char **split(char *line, char *limit)
 {
-	int bufsize = 64, idx = 0;
+	unsigned int bufsize = 64, new_bufsize = 0, idx = 0;
 	char **tokens = NULL;
 	char *token, **tokens_back;
 
@@ -28,15 +28,16 @@ char **split(char *line, char *limit)
 
 		if (idx >= bufsize)
 		{
-			bufsize += 64;
+			new_bufsize = bufsize + 64;
 			tokens_back = tokens;
-			tokens = realloc(tokens, bufsize * sizeof(char *));
+			tokens = _realloc(tokens, bufsize, new_bufsize * sizeof(char *));
 			if (tokens == NULL)
 			{
 				free(tokens_back);
 				perror("Realloc tokens fails");
 				exit(EXIT_FAILURE);
 			}
+			bufsize = new_bufsize;
 		}
 		token = strtok(NULL, limit);
 	}

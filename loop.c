@@ -15,7 +15,7 @@ void loop(void)
 		write(STDIN_FILENO, "$ ", 2);
 		read = readline();
 		args = split(read, " \t\r\n");
-		status = exec(args);
+		status = exec_built(args);
 
 		free(read);
 		free(args);

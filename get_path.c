@@ -3,6 +3,7 @@
 /**
  * get_path - get the absolute path of a command
  * @args: command
+ * Return: command with absolute path
  */
 
 char **get_path(char **args)

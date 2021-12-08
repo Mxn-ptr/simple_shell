@@ -1,1 +1,65 @@
-Man of our shell
+TH HSH
+
+.SH NAME
+HSH - copy of shell
+
+.SH SYNOPSIS
+.B #include "main.h"
+
+.B $ [COMMAND]  [OPTION];
+
+.SH DESCRIPTION
+This program is like the famous shell, a Linux command line interpreter between the user and the kernel and executes programs called commands. Of course, this is a simplified version and you will find just below the usable commands.
+
+.SH COMMANDS
+You can insert your command directly in interactive mode from the program : ls
+Or in non-interactive mode on your own shell : "echo "/bin/ls" | ./hsh"
+
+.TP
+.B
+ls
+list environment files
+
+.TP
+.B
+cat
+displays the content of the file
+
+.TP
+.B
+env
+Prints actual environment
+
+.TP
+.B
+exit
+Exit the program
+
+.TP
+.B
+cd
+change directory
+
+.SH EXAMPLES
+.B ls -l /test or /bin/ls -l /test
+=> test.c bonjour.c hola.c main.h
+
+.B cat bonjour.c or /bin/cat bonjour.c
+=> #include <stdio.h>
+
+	int main()
+	{
+		printf("Bonjour\n");
+
+		return (0);
+	}
+
+
+.SH BUGS
+Lot of little bugs we have to fix.
+
+.SH SEE ALSO
+man sh
+
+.SH CREDITS
+This man page is created only for an Holberton School's project by Lucas Doual and Maxence Potier.

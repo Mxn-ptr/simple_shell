@@ -16,8 +16,12 @@ void loop(void)
 		read = readline();
 		args = split(read, " \t\r\n");
 		status = exec_built(args);
+		get_path(args);
+		exec(args);
+
 
 		free(read);
 		free(args);
+		args = NULL;
 	} while (status);
 }

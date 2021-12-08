@@ -1,18 +1,33 @@
 #include "main.h"
 
+/**
+ * _getenv - get the environnement
+ * @name : environnement's name
+ * Return: poitner to the environnement
+ */
+
 char *_getenv(char *name)
 {
-	char *tok;
-	int i;
+	int i = 0;
+	unsigned int j;
+	int k;
 
-	for (i = 0; environ[i]; i++)
+	while (environ[i] != NULL)
 	{
-		tok = strtok(environ[i], "=");
-		if (_strcmp(tok, name) == 0)
+		if (_strstr(environ[i], name))
 		{
-			tok = strtok(NULL, "=");
-			return (tok); 
+			j = 0;
+			k = 0;
+			while (name[j])
+			{
+				if (environ[i][j] == name[j])
+					k++;
+				j++;
+			}
+			if (k == _strlen(name))
+			return (_strstr(environ[i], name) + _strlen(name));
 		}
+		i++;
 	}
-	return (name);
+	return (NULL);
 }

@@ -22,6 +22,7 @@ int _strcmp(char *s1, char *s2);
 void *_calloc(unsigned int nmemb, unsigned int size);
 char *_strcat(char *dest, char *src);
 char *_strdup(char *str);
+int _strlen(char *s);
 
 /* Functions for shell */
 void loop(void);
@@ -29,11 +30,11 @@ char *readline(void);
 char **split(char *line, char *limit);
 int exec(char **args);
 char *_getenv(char *name);
-int num_built();
+int num_built(void);
 int exit_bn();
 int cd_bn(char **args);
 int env_bn();
 int exec_built(char **args);
-
+char **get_path(char **args);
 
 #endif

@@ -20,8 +20,7 @@ int exec(char **args)
 	else if (pid == 0)
 	{
 		if (execve(args[0], args, NULL) == -1)
-			perror("./shell");
-		exit(EXIT_FAILURE);
+		return (-1);
 	}
 	else
 	{

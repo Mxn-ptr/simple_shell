@@ -31,9 +31,9 @@ char **split(char *line, char *limit);
 int exec(char **args);
 char *_getenv(char *name);
 int num_built(void);
-int exit_bn();
+int exit_bn(__attribute__((__unused__)));
 int cd_bn(char **args);
-int env_bn();
+int env_bn(__attribute__((__unused__)));
 int exec_built(char **args);
 char **get_path(char **args);
 

@@ -23,5 +23,5 @@ void loop(void)
 		free(read);
 		free(args);
 		args = NULL;
-	} while (status);
+	} while (status == 0);
 }

@@ -24,4 +24,5 @@ void loop(void)
 		free(args);
 		args = NULL;
 	} while (status == 0);
+	exit(0);
 }

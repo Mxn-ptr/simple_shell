@@ -66,7 +66,7 @@ int env_bn(char **args __attribute__((__unused__)))
 	{
 		_printf("%s\n", environ[i]);
 	}
-	return (1);
+	exit(0);
 }
 
 /**

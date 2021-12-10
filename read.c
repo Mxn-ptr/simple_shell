@@ -15,7 +15,7 @@ char *readline(void)
 	if (get == -1)
 	{
 		free(input);
-		exit(EXIT_FAILURE);
+		exit(0);
 	}
 
 	return (input);

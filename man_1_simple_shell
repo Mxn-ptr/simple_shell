@@ -1,4 +1,5 @@
-TH HSH
+./" Manpage for simple_shell
+.TH man 1 "10 December 2021" "1.0" "HSH"
 
 .SH NAME
 HSH - copy of shell
@@ -42,17 +43,12 @@ change directory
 
 .SH EXAMPLES
 .B ls -l /test or /bin/ls -l /test
-=> test.c bonjour.c hola.c main.h
+
+test.c bonjour.c hola.c main.h
 
 .B cat bonjour.c or /bin/cat bonjour.c
-=> #include <stdio.h>
 
-	int main()
-	{
-		printf("Bonjour\n");
-
-		return (0);
-	}
+This is the content of the file bonjour.c
 
 
 .SH BUGS

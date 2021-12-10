@@ -1,12 +1,22 @@
 # Project Simple Shell
 
-> End of semester project of Holberton School
+This project is for the end of semester project of Holberton School.
+It's a reproduction of the Shell, the Linux command interpreter but in a simplified version.
+
+## How it works ?
+
+1. We have a prompt "$ ".
+2. The program waits for the user's command.
+3. The command is separated into string arrays with the space as delimiter.
+4. It searches if the command is a built-in. If yes, it executes it. Else it continues.
+5. It searches if the input of the user is the absolute path of the command. If yes, it executes. Else, it searches the absolute path and returns it.
+6. It executes the command. And restart to the step 1.
 
 ## Learning objectives
 
     - Who designed and implemented the original Unix operating system
     - Who wrote the first version of the UNIX shell
-    - Who invented the B programming language (the direct predecessor to the C pr	ogramming language)
+    - Who invented the B programming language (the direct predecessor to the C programming language)
     - Who is Ken Thompson
     - How does a shell work
     - What is a pid and a ppid
@@ -18,10 +28,10 @@
     - How to execute another program with the execve system call
     - How to suspend the execution of a process until one of its children terminates
     - What is EOF / “end-of-file”?
+
 ##  List of allowed functions and systems calls
 
-
-    - access (man 2 access)
+	- access (man 2 access)
     - chdir (man 2 chdir)
     - close (man 2 close)
     - closedir (man 3 closedir)
@@ -53,17 +63,22 @@
     - wait4 (man 2 wait4)
     - write (man 2 write)
 
+## Cloning the repository
+
+`git clone https://github.com/Mxn-ptr/simple_shell.git`
+
 ## Compilation
 
-> gcc -Wall -Werror -Wextra -pedantic -std=gnu98 *.c -o hsh
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu98 *.c -o hsh`
 
 ## Testing
 
 ```
 $ ./hsh
  ($) /bin/ls
- hsh main.c shell.c
- ($)
+ hsh main.c shell.c hello.c
+ ($) ls
+ hsh main.c shell.c hello.c
  ($) exit
 $
 ```
@@ -72,14 +87,26 @@ but also in non-interactive mode :
 
 ```
 $ echo "/bin/ls" | ./hsh
-hsh main.c shell.c test_ls_2
-$
-$ cat test_ls_2
-/bin/ls
-/bin/ls
-$
-$ cat test_ls_2 | ./hsh
-hsh main.c shell.c test_ls_2
-hsh main.c shell.c test_ls_2
-$
+hsh main.c shell.c hello.c
+$ cat hello.c | ./hsh
+#include "main.h"
+
+int main()
+{
+    printf("Hello everyone !\n");
+    
+    return (0);
+}
 ```
+
+## Credits
+
+This project was created by Lucas Doual and Maxence Potier.
+
+Lucas Doual : 
+- [LinkedIn](https://www.linkedin.com/in/lucas-doual-476425180/)
+- [GitHub](https://github.com/LDoualito)
+
+Maxence Potier :
+- [LinkedIn](https://www.linkedin.com/in/maxence-potier-534b0a1b0/)
+- [GitHub](https://github.com/Mxn-ptr)

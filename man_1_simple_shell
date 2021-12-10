@@ -10,7 +10,8 @@ HSH - copy of shell
 .B $ [COMMAND]  [OPTION];
 
 .SH DESCRIPTION
-This program is like the famous shell, a Linux command line interpreter between the user and the kernel and executes programs called commands. Of course, this is a simplified version and you will find just below the usable commands.
+This program is like the famous shell, a Linux command line interpreter between the user and the kernel and executes programs called commands. Of course, 
+this is a simplified version and you will find just below the usable commands.
 
 .SH COMMANDS
 You can insert your command directly in interactive mode from the program : ls

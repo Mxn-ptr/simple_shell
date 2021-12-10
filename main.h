@@ -36,5 +36,6 @@ int cd_bn(char **args);
 int env_bn(__attribute__((__unused__)));
 int exec_built(char **args);
 char **get_path(char **args);
+void signalHandler(int control);
 
 #endif

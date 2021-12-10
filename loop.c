@@ -11,6 +11,8 @@ void loop(void)
 	char **args;
 	int status;
 
+	signal(SIGINT, signalHandler);
+
 	do {
 		write(STDIN_FILENO, "$ ", 2);
 		read = readline();

@@ -25,7 +25,7 @@ int num_built(void)
 
 int exit_bn(char **args __attribute__((__unused__)))
 {
-	return (1);
+	exit(0);
 }
 
 /**
